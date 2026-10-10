@@ -1,1 +1,10 @@
+# Installation du paquet
+sudo apt install kibana -y
 
+# Démarrage du service
+sudo systemctl daemon-reload
+sudo systemctl enable kibana
+sudo systemctl start kibana
+
+# Vérification 
+sudo systemctl status kibana
