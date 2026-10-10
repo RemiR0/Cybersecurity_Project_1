@@ -1,0 +1,3 @@
+# Objectif : Repérer des tentatives répétées d'authentification infructueuses sur le service SSH.
+
+ssh fakeuser@127.0.0.1
