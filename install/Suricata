@@ -1,1 +1,9 @@
+# Installation du paquet
+sudo apt install suricata -y
 
+# Démarrage du service
+sudo systemctl enable suricata
+sudo systemctl start suricata
+
+# Vérification 
+sudo systemctl status suricata
