@@ -1,0 +1,3 @@
+# Objectif : Vérifier que le moteur de détection réagit à une tentative de communication réseau correspondant à une règle de menace connue.
+
+curl http://testmyids.com/
