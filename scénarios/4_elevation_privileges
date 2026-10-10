@@ -1,0 +1,4 @@
+# Objectif : Enregistrer une tentative anormale ou un échec d'utilisation de la commande d'administration sudo par un utilisateur non autorisé.
+
+sudo -k
+sudo ls
