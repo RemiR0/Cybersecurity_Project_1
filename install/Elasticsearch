@@ -1,1 +1,20 @@
+# Installation des dépendances nécessaires :
+sudo apt install apt-transport-https gpg curl -y
 
+# Ajout de la clé GPG officielle
+curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
+
+# Ajout du dépôt
+echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
+
+# Mise à jour et installation du paquet
+sudo apt update
+sudo apt install elasticsearch -y
+
+# Démarrage du service
+sudo systemctl daemon-reload
+sudo systemctl enable elasticsearch
+sudo systemctl start elasticsearch
+
+# Vérification 
+sudo systemctl status elasticsearch
