@@ -1,1 +1,9 @@
+# Installation du paquet
+sudo apt install syslog-ng -y
 
+# Démarrage du service
+sudo systemctl enable syslog-ng
+sudo systemctl start syslog-ng
+
+# Vérification 
+sudo systemctl status syslog-ng
