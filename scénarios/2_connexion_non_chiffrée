@@ -1,1 +1,1 @@
-timeout 5s curl telnet://example.com:21
+timeout 1s curl telnet://example.com:21

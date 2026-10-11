@@ -176,7 +176,7 @@ alert tcp any any -> any 21 (msg:"[SCENARIO 2] Securite - Tentative de connexion
 Test :
 
 ```bash
-timeout 5s curl telnet://example.com:21
+timeout 1s curl telnet://example.com:21
 ```
 
 La priorité 2 est retenue parce qu'une connexion à un service potentiellement non chiffré mérite une vérification. La classification `bad-unknown` reste prudente, car le paquet seul ne permet pas de confirmer une fuite de données.
@@ -197,7 +197,7 @@ alert tcp any any -> any 4444 (msg:"[SCENARIO 3] Compromission - Trafic suspect 
 Test :
 
 ```bash
-timeout 5s curl telnet://example.com:4444
+timeout 1s curl telnet://example.com:4444
 ```
 
 La priorité 2 est utilisée car cette tentative doit être vérifiée, tout en gardant une classification prudente : la règle se base essentiellement sur le port de destination.
