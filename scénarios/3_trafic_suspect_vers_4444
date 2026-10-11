@@ -1,0 +1,1 @@
+timeout 5s curl telnet://example.com:4444

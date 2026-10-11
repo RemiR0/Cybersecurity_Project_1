@@ -1,4 +1,0 @@
-# Objectif : Détecter une phase de repérage ou de balayage de ports sur la machine cible.
-
-sudo apt install nmap -y
-nmap -sS 127.0.0.1

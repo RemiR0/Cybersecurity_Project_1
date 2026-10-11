@@ -1,0 +1,5 @@
+alert http any any -> any any (msg:"[SCENARIO 1] Tentative Web - Parametre exploit detecte"; content:"exploit=1"; http_uri; classtype:web-application-activity; priority:2; sid:1000002; rev:1;)
+alert tcp any any -> any 21 (msg:"[SCENARIO 2] Securite - Tentative de connexion FTP (Non chiffre)"; flags:S; classtype:bad-unknown; priority:2; sid:1000003; rev:1;)
+alert tcp any any -> any 4444 (msg:"[SCENARIO 3] Compromission - Trafic suspect vers port 4444"; flags:S; classtype:bad-unknown; priority:2; sid:1000004; rev:1;)
+alert http any any -> any any (msg:"[SCENARIO 4] Reconnaissance - Scanner Nmap detecte"; content:"Nmap"; http_header; classtype:network-scan; priority:3; sid:1000005; rev:1;)
+alert icmp any any -> any any (msg:"[SCENARIO 5] Attaque DoS - Paquet ICMP geant detecte"; dsize:>1000; classtype:attempted-dos; priority:3; sid:1000006; rev:1;)
